@@ -125,8 +125,5 @@
 	<name>Internal Releases</name>
     <url>http://52.207.162.23:8082/repository/maven-releases/</url>
  </repository>
-</distributionManagement>
-
-
-</distributionManagement>
+	</distributionManagement>
 </project>
