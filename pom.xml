@@ -122,7 +122,7 @@
  </snapshotRepository>
  <repository>
 	<id>releases</id>
-	<name>Internal Releases</name>
+	<name>Releases</name>
     <url>http://107.23.211.148:8081/nexus/content/repositories/releases/</url>
  </repository>
 	</distributionManagement>
