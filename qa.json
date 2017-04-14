@@ -1,0 +1,22 @@
+[
+  {
+    "ParameterKey": "ImageID",
+    "ParameterValue": "ami-6edd3078"
+  }, 
+  {
+    "ParameterKey": "InstanceType",
+    "ParameterValue": "m3.medium"
+  },
+   {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "pubpriv"
+   },
+  {
+     "ParameterKey": "SubnetId",
+    "ParameterValue": "subnet-9caca6d5"
+  },
+  {
+    "ParameterKey": "InstanceSecurityGroup",
+    "ParameterValue": "sg-c5eab7b9"
+  }
+]
