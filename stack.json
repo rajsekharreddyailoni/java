@@ -60,10 +60,34 @@
 					"Fn::Base64": {
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
-                                                        "curl -o /tmp/bootchef.sh http://10.0.0.228/bootchef.sh\n",
-                                                        "chmod +x /tmp/bootchef.sh\n",
-                                                        "/bin/bash /tmp/bootchef.sh ::PROD_ENV:: ::PROD_COMPONENT::\n",
-							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
+                                                     
+							"yum install -y wget\n",
+							 "cd /tmp\n",
+							
+							"sed -i s#Defaults.*requiretty#Defaults\ \!requiretty#g /etc/sudoers\n",
+								"cd /tmp/\n",
+							"echo "Downloading the rpm\n",
+							"wget  http://54.202.25.127/chef-12.19.36-1.el7.x86_64.rpm\n",
+
+							"echo "Installating the rpm\n",
+
+							"sudo rpm -ivh *.rpm\n",
+
+							"sudo mkdir -p /etc/chef\n",
+
+							"cd /etc/chef\n",
+
+							"wget http://54.202.25.127/client.rb\n",
+							"wget http://54.202.25.127/knife.rb\n",
+							"wget http://54.202.25.127/sandykarhty20.pem\n",
+							"chmod 400 sandykarhty.pem\n",
+							"sudo chef-client\n",
+							"knife node run_list add tmenda "recipe[test::docs_example"]\n",
+							"sudo chef-client\n",
+							"cd /opt/special/tomcat_docs_7_0_42/webapps\n",
+							"wget http://107.23.211.148:8081/nexus/service/local/repositories/releases/content/com/mkyong/CounterWebApp/1.1.1/CounterWebApp-1.1.1.war\n",
+							"service tomcat_docs restart\n",
+							 "/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
 							}, "'\n"
 
