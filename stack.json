@@ -64,10 +64,10 @@
 							"yum install -y wget\n",
 							 "cd /tmp\n",
 							
-							"sed -i s#Defaults.*requiretty#Defaults\ \!requiretty#g /etc/sudoers\n",
+							"sed -i s#Defaults.*requiretty#Defaults\\!requiretty#g /etc/sudoers\n",
 								"cd /tmp/\n",
-							"echo "Downloading the rpm\n",
-							"wget  http://54.202.25.127/chef-12.19.36-1.el7.x86_64.rpm\n",
+						
+							"wget http://54.242.180.146/chef-13.0.118-1.el7.x86_64.rpm\n",
 
 							"echo "Installating the rpm\n",
 
@@ -77,10 +77,10 @@
 
 							"cd /etc/chef\n",
 
-							"wget http://54.202.25.127/client.rb\n",
-							"wget http://54.202.25.127/knife.rb\n",
-							"wget http://54.202.25.127/sandykarhty20.pem\n",
-							"chmod 400 sandykarhty.pem\n",
+							"wget http://54.242.180.146/client.rb\n",
+							"wget http://54.242.180.146/knife.rb\n",
+							"wget http://54.242.180.146/tmenda.pem\n",
+							"chmod 400 tmenda.pem\n",
 							"sudo chef-client\n",
 							"knife node run_list add tmenda "recipe[test::docs_example"]\n",
 							"sudo chef-client\n",
