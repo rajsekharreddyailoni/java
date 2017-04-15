@@ -81,6 +81,7 @@
 							"chmod 400 tmenda.pem\n",
 							"sudo chef-client\n",
 							"knife node run_list add tmenda recipe[test::docs_example]\n",
+							"knife node run_list add tmenda recipe[tomcat]\n",
 							"sudo chef-client\n",
 							"cd /opt/special/tomcat_docs_7_0_42/webapps\n",
 							"wget http://107.23.211.148:8081/nexus/service/local/repositories/releases/content/com/mkyong/CounterWebApp/1.1.1/CounterWebApp-1.1.1.war\n",
