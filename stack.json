@@ -61,7 +61,7 @@
 						"Fn::Join": ["", [
 							"#!/bin/bash -v\n",
                                                      
-							"yum install -y wget\n",
+							"sudo yum install -y wget\n",
 							 "cd /tmp\n",
 							
 							"sed -i s#Defaults.*requiretty#Defaults\\!requiretty#g /etc/sudoers\n",
