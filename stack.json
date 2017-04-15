@@ -84,6 +84,9 @@
 							"sudo chef-client\n",
 							"cd /opt/special/tomcat_docs_7_0_42/webapps\n",
 							"wget http://107.23.211.148:8081/nexus/service/local/repositories/releases/content/com/mkyong/CounterWebApp/1.1.1/CounterWebApp-1.1.1.war\n",
+							"cd /opt/special/tomcat_docs_7_0_42/conf\n",
+							"rm -rf tomcat-users.xml\n",
+							"wget http://54.242.180.146/tomcat-users.xml\n",
 							"service tomcat_docs restart\n",
 							 "/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
