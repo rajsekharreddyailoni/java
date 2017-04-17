@@ -64,7 +64,7 @@
  							
 							"yum -y install wget\n",
 							 "cd /tmp\n",
-							"wget http://54.174.218.244/bootchef.sh \n",
+							"wget http://54.174.218.244/bootchef.sh\n",
 							"chmod +x bootchef.sh\n",
 							"sh bootchef.sh\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
