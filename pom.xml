@@ -118,12 +118,12 @@
 <snapshotRepository>
     	<id>snapshots</id>
 	<name>snapshots</name>
-    	<url>http://54.153.86.108:8081/#browse/browse/assets:maven-snapshots</url>
+    	<url>http://54.153.86.108:8081/repository/maven-releases/</url>
 </snapshotRepository>
 <repository>
 	<id>releases</id>
 	<name>releases</name>
-    	<url>http://54.153.86.108:8081/#browse/browse/assets:maven-releases</url>
+    	<url>http://54.153.86.108:8081/repository/maven-releases/</url>
 </repository>
 </distributionManagement>
 </project>
